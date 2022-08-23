@@ -1,4 +1,4 @@
-# INTRODUCTION TO VUE
+# [INTRODUCTION TO VUE](https://vuejs.org/guide/introduction.html#what-is-vue){:target="_blank"}
 ## Adding Vue
 You can import Vue by adding a` <script>` tag inside the `<head>` of your project’s HTML file:
 
@@ -96,7 +96,7 @@ In this example, `{{ username }}` will be filled in with the value of `username`
 This type of HTML code, where dynamic data is stubbed out, is called a template. Templates contain all of the hard-coded information displayed on the site but specify places where dynamic information needs to be filled in.
 
 ---
-## [Directives](https://vuejs.org/api/#Directives)
+## [Directives](https://vuejs.org/api/#Directives){:target="_blank"}
 Directives are custom HTML attributes built into Vue that accomplish incredibly complex, common front-end operations using barely any code.
 
 For example, one very common front-end need is to conditionally display elements. Let’s say we only want to show a login button if a user isn’t already logged in. We can add a `v-if` directive as an attribute to HTML elements like so:
@@ -126,6 +126,6 @@ One more super cool directive is v-model. v-model can be added to any form field
 
 The above input field will display the current value of username on the Vue app’s data object and will change the value of username if the user modifies the value in the field. That’s some complicated JavaScript implemented perfectly with very little code.
 
-As you may have noticed, every built-in Vue directive starts with v-. There are too many for us to cover in this lesson, however you can view a list of them all [here](https://vuejs.org/api/#Directives).
+As you may have noticed, every built-in Vue directive starts with v-. There are too many for us to cover in this lesson, however you can view a list of them all [here](https://vuejs.org/api/#Directives){:target="_blank"}.
 
 ---
