@@ -1,6 +1,9 @@
 //Creating Vue Apps
 const app = new Vue({
   el: '#app',
+  //display the data,
+  //data is a function and 
+  //return an object
   data: {
     username: 'CoderInTraining',
     newTweet: '',
