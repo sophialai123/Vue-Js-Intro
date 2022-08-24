@@ -18,34 +18,32 @@
         </div>
         <h3>{{username}}</h3>
       </div>
-      <div class="user-bio">
+      <!-- added a v-if to the bio section so that the section only displays if bio exists. -->
+      <div class="user-bio" v-if="bio">
         <em>Bio: </em> {{bio}}
       </div>
     </div>
+    <!-- added v-for to the tweets section so that all tweets will be displayed, not just the first three. -->
     <div class="tweets">
-      <div class="tweet">
-        <h3>{{username}}</h3>
-        <p>{{tweets[0]}}</p>
-      </div>
-      <div class="tweet">
-        <h3>{{username}}</h3>
-        <p>{{tweets[1]}}</p>
-      </div>
-      <div class="tweet">
-        <h3>{{username}}</h3>
-        <p>{{tweets[2]}}</p>
+      <!-- v-bind takes a value from the Vue app’s data object and uses it as the value of the specified component prop -->
+      <div class="tweet" v-for="tweet in tweets" v-bind:message="tweet" v-bind:author='username'>
+        <h3>{{ username }}</h3>
+        <p>{{ tweet }}</p>
       </div>
     </div>
     <div class="settings">
       <h2>Settings</h2>
       <label for="username">Username</label>
-      <input type="text" value="username" placeholder="Username" />
+      <!-- v-model binds the value of the HTML field element it is on to the data value with the provided name. -->
+      <input type="text" value="username" placeholder="Username" v-model="username" />
       <label for="bio">Bio</label>
-      <textarea value="bio" placeholder="Bio"></textarea>
+      <textarea value="bio" placeholder="Bio" v-model="bio"></textarea>
       <label for="tweet">New Tweet</label>
       <div class="new-tweet">
-        <input type="text" value="tweet" placeholder="New Tweet" />
-        <button>Add Tweet</button>
+        <!-- Using v-model, bind the “New Tweet” <input> field to newTweet -->
+        <input type="text" value="tweet" placeholder="New Tweet" v-model="newTweet" />
+        <!-- Add a v-on:click directive with a value of tweets.push(newTweet) to the “Add Tweet” -->
+        <button v-on:click="tweets.push(newTweet)">Add Tweet</button>
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-# [INTRODUCTION TO VUE](https://vuejs.org/guide/introduction.html#what-is-vue)
+# [INTRODUCTION TO VUE2](https://v2.vuejs.org/v2/guide/)
 ## Adding Vue
 You can import Vue by adding a` <script>` tag inside the `<head>` of your project’s HTML file:
 
@@ -129,3 +129,17 @@ The above input field will display the current value of username on the Vue app�
 As you may have noticed, every built-in Vue directive starts with v-. There are too many for us to cover in this lesson, however you can view a list of them all [here](https://vuejs.org/api/#Directives).
 
 ---
+## Components
+When creating a component, you provide a template that should be rendered whenever the component is used in HTML. You then specify which pieces of dynamic information, called `props`, the component can receive to fill in this template. When used in your HTML code, props look like normal HTML attributes, you add them to the opening tag of the component HTML element with a name and a value.
+
+Once you’ve created your component, you can then use it throughout your site just like any other HTML element. This means no copy/pasting of HTML code, no need to make the same change in multiple places across your site, and no potentially broken or misstyled elements.
+
+---
+## Review
+Let’s summarize some of the awesome things Vue can do:
+
+- Make front-end code quicker to write — loading Vue in one line, mustache templates, built-in directives, and re-usable components make Vue easy to read and easy to write
+  
+- Make front-end code easier to modify and fix — using readable mustache templates, using built-in heavily-tested directives, and consolidating repetitive code into components make Vue code less error-prone and easier to fix when errors do occur
+  
+- Make front-end apps fast and responsive — Vue’s use of a Virtual DOM makes site updates happen only when they need to and incredibly fast when they do
